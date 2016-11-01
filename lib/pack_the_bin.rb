@@ -30,10 +30,10 @@ class PackTheBin
     fields.reduce(0) { |a, e| a + e[:length] }
   end
 
-  def self.convert(from_type, from_len, to_type, to_len, data)
+  def self.convert(data, from_type, from_len, to_type, to_len)
     from = type_to_str(from_type, from_len)
     to = type_to_str(to_type, to_len)
-    [data].pack(from).unpack(to)
+    [data].pack(from).unpack(to)[0]
   end
 
   private_class_method
