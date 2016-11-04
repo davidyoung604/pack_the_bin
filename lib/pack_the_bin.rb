@@ -1,6 +1,6 @@
 # Methods for reading and unpacking binary data stored in a file.
 # All methods expect "fields" param to be an array of hashes, each with
-# mandatory keys :name, :offset, :length, :type. All other keys are ignored.
+# mandatory keys :name, :length, :type. All other keys are ignored.
 # e.g.
 # fields = [
 #   { name: :endian, offset: 0, length: 2, type: :str },
